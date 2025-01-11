@@ -1,6 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
+  namespace: api-front
   labels:
     app.kubernetes.io/name: LoadBalancerController
   name: alb
