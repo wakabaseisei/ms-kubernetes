@@ -1,0 +1,27 @@
+replicaCount: 2
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+image:
+  repository: nginx
+  tag: "TODO:"
+autoscaling:
+  enabled: false
+  # TODO: set up later
+ingress:
+  enabled: true
+  className: "alb"
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+  paths:
+    - path: /
+      pathType: Prefix
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local

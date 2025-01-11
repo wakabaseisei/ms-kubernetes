@@ -4,6 +4,7 @@ metadata:
   name: {{ include "api-front.fullname" . }}
   labels:
     {{- include "api-front.labels" . | nindent 4 }}
+  namespace: api-front
 spec:
   type: {{ .Values.service.type }}
   ports:
