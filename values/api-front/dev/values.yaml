@@ -7,11 +7,10 @@ resources:
     cpu: 100m
     memory: 128Mi
 image:
-  repository: nginx
-  tag: "TODO:"
+  repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/api-front
+  tag: "dev-20241220-203212-da71977"
 autoscaling:
   enabled: false
-  # TODO: set up later
 ingress:
   enabled: true
   className: "alb"
@@ -22,6 +21,3 @@ ingress:
     - path: /
       pathType: Prefix
   tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
