@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/wakabaseisei/ms-kubernetes.git
-      revision: HEAD
+      revision: main
       directories:
       - path: services/*
   template:
