@@ -22,7 +22,7 @@ spec:
         helm:
           releaseName: '{{path.basename}}'
           valueFiles:
-          - "values/{{path.basename}}/dev/values.yaml"
+          - "../../values/{{path.basename}}/dev/values.yaml"
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
