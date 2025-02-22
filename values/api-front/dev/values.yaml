@@ -8,7 +8,7 @@ resources:
     memory: 128Mi
 image:
   repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/api-front
-  tag: "dev-20250222-151829-4e7e6b5"
+  tag: "dev-20250222-141648-5da68cd"
 autoscaling:
   enabled: false
 ingress:
