@@ -24,7 +24,7 @@ ingress:
 serviceAccount:
   name: api-front
   annotations: 
-    eks.amazonaws.com/role-arn: arn:aws:iam::148761642613:role/irsa
+    eks.amazonaws.com/role-arn: arn:aws:iam::148761642613:role/irsa-api-front
 
 env:
   - name: AWS_REGION
