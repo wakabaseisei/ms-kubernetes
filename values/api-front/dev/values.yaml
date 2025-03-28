@@ -8,7 +8,7 @@ resources:
     memory: 128Mi
 image:
   repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/api-front
-  tag: "dev-20250222-170449-cc6a907"
+  tag: "dev-20250328-202836-54a810b"
 autoscaling:
   enabled: false
 ingress:
@@ -25,3 +25,15 @@ serviceAccount:
   name: api-front
   annotations: 
     eks.amazonaws.com/role-arn: arn:aws:iam::148761642613:role/irsa
+
+env:
+  - name: AWS_REGION
+    value: "ap-northeast-1"
+  - name: DB_HOST
+    value: "api-front.cluster-ct8g8ao0ofg2.ap-northeast-1.rds.amazonaws.com"
+  - name: DB_NAME
+    value: "ApiFront"
+  - name: DB_USER
+    value: "api-front"
+  - name: DB_PORT
+    value: "3306"
