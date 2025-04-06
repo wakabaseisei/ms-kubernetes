@@ -8,14 +8,14 @@ resources:
     memory: 128Mi
 image:
   repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/api-front
-  tag: "dev-20250329-135749-ccbd0f5"
+  tag: "dev-20250406-120609-0289a5a"
 autoscaling:
   enabled: false
 ingress:
   enabled: true
   className: "alb"
   annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: ip
   paths:
     - path: /
