@@ -1,0 +1,29 @@
+replicaCount: 2
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+image:
+  repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/ms-user
+  tag: "TODO:"
+autoscaling:
+  enabled: false
+serviceAccount:
+  name: ms-user
+  annotations: 
+    eks.amazonaws.com/role-arn: arn:aws:iam::148761642613:role/irsa-ms-user
+
+env:
+  - name: AWS_REGION
+    value: "ap-northeast-1"
+  - name: DB_HOST
+    value: "ms-user.cluster-ct8g8ao0ofg2.ap-northeast-1.rds.amazonaws.com"
+  - name: DB_NAME
+    value: "MSUser"
+  - name: DB_USER
+    value: "ms-user"
+  - name: DB_PORT
+    value: "3306"

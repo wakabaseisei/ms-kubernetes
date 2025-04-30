@@ -21,19 +21,7 @@ ingress:
     - path: /
       pathType: Prefix
   tls: []
-serviceAccount:
-  name: api-front
-  annotations: 
-    eks.amazonaws.com/role-arn: arn:aws:iam::148761642613:role/irsa-api-front
 
 env:
-  - name: AWS_REGION
-    value: "ap-northeast-1"
-  - name: DB_HOST
-    value: "api-front.cluster-ct8g8ao0ofg2.ap-northeast-1.rds.amazonaws.com"
-  - name: DB_NAME
-    value: "ApiFront"
-  - name: DB_USER
-    value: "api-front"
-  - name: DB_PORT
-    value: "3306"
+  - name: USER_SERVICE_ENDPOINT
+    value: "ms-user.ms-user.svc.cluster.local"
