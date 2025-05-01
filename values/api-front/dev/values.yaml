@@ -24,4 +24,4 @@ ingress:
 
 env:
   - name: USER_SERVICE_ENDPOINT
-    value: "ms-user.ms-user.svc.cluster.local"
+    value: "http://ms-user.ms-user.svc.cluster.local:8080"
