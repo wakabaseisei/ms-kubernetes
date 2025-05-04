@@ -8,7 +8,7 @@ resources:
     memory: 128Mi
 image:
   repository: 148761642613.dkr.ecr.ap-northeast-1.amazonaws.com/ms-user
-  tag: "dev-20250501-194015-dc7bfca"
+  tag: "dev-20250504-161548-d4889d5"
 autoscaling:
   enabled: false
 serviceAccount:
